@@ -32,3 +32,12 @@ https://github.com/mozilla-mobile/FirefoxData-android
 
 Essentially, open the project in Android Studio, and run the default gradle task which is to build the AccountsExample project.
 I used an API level 25 simulator for most of this work, so that is the only guaranteed version.
+
+Pattern lock view:
+
+This uses https://github.com/aritraroy/PatternLockView, to experiment with using an in-app pattern lock without using Android's `Confirm Credential API` (that API only provides a seamless in-app flow on newer Android versions). Requiring a pattern lock or a 4-6 digit pin code to access the app seems quite common for password manager apps.
+
+On app start you will be required to create a pattern to lock the app, the pattern is stored using the KeyStore.
+
+There are a few pattern lock components on github, this one appears maintained and is straightforward to integrate into an app. 
+
